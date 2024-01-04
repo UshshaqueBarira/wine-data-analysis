@@ -4,6 +4,7 @@ import pandas_bokeh
 from sklearn.datasets import load_wine
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
+from datatime import datetime
 #@st.cache.data
 def load_data():
     wine=load_wine()
@@ -11,6 +12,9 @@ def load_data():
     wine_df["WineType"]=[wine.target_names[t] for t in wine.target]
     return wine_df
 st.set_page_config(page_title='Wine Dashboard',layout='wide')
+
+st.write(datetime.now)
+
 wine_df=load_data()
 ingredients=wine_df.drop(columns=["WineType"]).columns
 
