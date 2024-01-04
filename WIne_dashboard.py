@@ -14,7 +14,7 @@ def load_data():
     return wine_df
 st.set_page_config(page_title='Wine Dashboard',layout='wide')
 
-st.write(datetime.now)
+st.write(datetime.now())
 
 wine_df=load_data()
 ingredients=wine_df.drop(columns=["WineType"]).columns
