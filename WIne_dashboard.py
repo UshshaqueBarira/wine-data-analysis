@@ -10,7 +10,7 @@ def load_data():
     wine_df=pd.DataFrame(wine.data, columns=wine.feature_names)
     wine_df["WineType"]=[wine.target_names[t] for t in wine.target]
     return wine_df
-st.set_page_config(title='Wine Dashboard',layout='wide')
+st.set_page_config(page_title='Wine Dashboard',layout='wide')
 wine_df=load_data()
 ingredients=wine_df.drop(columns=["WineType"]).columns
 
