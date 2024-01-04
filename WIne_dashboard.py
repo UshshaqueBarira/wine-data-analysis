@@ -4,7 +4,8 @@ import pandas_bokeh
 from sklearn.datasets import load_wine
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
-from datatime import datetime
+from datetime import datetime
+
 #@st.cache.data
 def load_data():
     wine=load_wine()
